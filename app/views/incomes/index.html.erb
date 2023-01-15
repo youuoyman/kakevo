@@ -18,6 +18,7 @@
 				<td><%= income.description %></td>
         <td>
 				<%= link_to "編集", [:edit, income] %>
+        <%= link_to "削除", income, method: :delete %>
 				</td>
 			</tr>
 		<% end %>

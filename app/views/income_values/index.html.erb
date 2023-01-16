@@ -1,4 +1,5 @@
 <h2>収入科目の新規データ登録</h2>
+<%= link_to "トップページへ戻る" root_path %>
 <p>登録年月を設定してください</p>
 <%= form_tag({controller: :income_values, action: :new}, {method: :post}) do %>
 	<input type="month" name="year_month">

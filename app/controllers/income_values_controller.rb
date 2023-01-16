@@ -11,5 +11,9 @@ class IncomeValuesController < ApplicationController
     @incomes = Income.order(created_at: :asc)
     @form = Form::IncomeForm.new
   end
-  
+
+  def edit
+    @income_value = IncomeValue.find(params[:id])
+    @income = Income.find(@income_value.income_id)
+  end
 end

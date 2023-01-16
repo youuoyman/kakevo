@@ -39,7 +39,7 @@ class ChangesController < ApplicationController
 
   private
 
-  def set_fixed
+  def set_change
     @change = Change.find(params[:id])
   end
 
@@ -50,4 +50,3 @@ class ChangesController < ApplicationController
 end
 
 
-end

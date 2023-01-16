@@ -18,7 +18,7 @@ class FixedValuesController < ApplicationController
   end
 
   def edit
-    @fixed = Fixed.find(@income_value.income_id)
+    @fixed = Fixed.find(@fixed_value.fixed_id)
   end
 
   def create
@@ -46,7 +46,7 @@ class FixedValuesController < ApplicationController
  private
 
   def set_fixed_value
-    @income_value = FixedValue.find(params[:id])
+    @fixed_value = FixedValue.find(params[:id])
   end
 
   def fixed_form_params
@@ -58,6 +58,6 @@ class FixedValuesController < ApplicationController
   def fixed_value_params
     params
     .require(:fixed_value)
-    .permit(:income_id, :year_month, :value, :description)
+    .permit(:fixed_id, :year_month, :value, :description)
   end
 end

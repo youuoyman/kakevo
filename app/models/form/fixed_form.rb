@@ -4,7 +4,7 @@ class Form::FixedForm < Form::Base
 	def initialize(attributes = {})
     super attributes
 		fixeds = Fixed.order(created_at: :asc)
-		self.fixed_values = fixeds.map { |fixed| FixedValue.new(fixed_id: income.id) } unless fixed_values.present?
+		self.fixed_values = fixeds.map { |fixed| FixedValue.new(fixed_id: fixed.id) } unless fixed_values.present?
   end
 
 	def fixed_values_attributes=(attributes)

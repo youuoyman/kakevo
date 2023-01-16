@@ -1,0 +1,39 @@
+<h2><%= "変動費科目データ登録" %></h2>
+<div><%= link_to "変動費科目データ一覧に戻る", :change_values %></div>
+
+<%= form_for(@form, url: change_values_path, method: :post) do |fb| %>
+
+<!-- 年月テーブル -->
+<table>
+  <tr>
+    <th>登録年月</th>
+    <th>名称</th>
+    <th>値</th>
+    <th>備考</th>
+  </tr>
+
+  <% cnt=0 %>
+  <%= fb.fields_for :change_values do |f| %>
+  <%= f.hidden_field :change_id %>
+
+ <tr>
+		<td>
+      <%= f.date_select :year_month,
+						start_year: 2010, end_year: Time.current.year,
+						use_month_numbers: true, discard_day: true, default: @year_month
+            %>
+    </td>
+
+   <th>
+    <%= @changes.find(@form.change_values[cnt].change_id).name %>
+    </th>
+    <% cnt+=1 %>
+    <td><%= f.text_field :value, size: 8 %></td>
+    <td><%= f.text_field :description, size: 8 %></td>
+
+ </tr>
+<% end %>
+</table>
+
+<div><%= fb.submit %></div>
+<% end %>

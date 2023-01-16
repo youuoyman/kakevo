@@ -1,0 +1,2 @@
+class ChangeValue < ApplicationRecord
+end

@@ -1,0 +1,2 @@
+module FixedsHelper
+end

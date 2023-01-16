@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 2023_01_16_131151) do
   end
 
   create_table "fixed_values", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "fixedcost_id", null: false
+    t.integer "fixed_id", null: false
     t.date "year_month"
     t.integer "value"
     t.string "description"

@@ -19,7 +19,7 @@
 	<tr>
 		<td><%= income_value.year_month.strftime('%Y年%m月') %></td>
 		<td><%= @incomes.find(income_value.income_id).name %></td>
-		<td><%= income_value.value.to_s(:delimited) %> 円</td>
+		<td><%= income_value.value(:delimited) %> 円</td>
 		<td><%= income_value.description %></td>
 		<td>
 		<%= link_to "編集", [:edit, income_value] %> |

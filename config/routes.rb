@@ -6,5 +6,6 @@ Rails.application.routes.draw do
   resources :fixeds
   resources :changes
   resources :income_values
+  resources :fixed_values
 end
 

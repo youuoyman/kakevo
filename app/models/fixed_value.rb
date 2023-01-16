@@ -1,0 +1,2 @@
+class FixedValue < ApplicationRecord
+end

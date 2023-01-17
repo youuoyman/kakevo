@@ -20,11 +20,11 @@
 	<tr>
 		<td><%= fixed_value.year_month.strftime('%Y年%m月') %></td>
 		<td><%= @fixeds.find(fixed_value.fixed_id).name %></td>
-		<td><%= fixed_value.value.to_s(:delimited) %> 円</td>
+		<td><%= fixed_value.value %> 円</td>
 		<td><%= fixed_value.description %></td>
 		<td>
-		<%= link_to "編集", [:edit, fixed_value] %> |
-		<%= link_to "削除", fixed_value, method: :delete %>
+		<%= link_to "編集", edit_fixed_value_path(fixed_value.id) %> 
+		<%= link_to "削除", fixed_value_path(fixed_value.id), method: :delete %>
 		</td>
 	</tr>
 	<% end %>

@@ -1,5 +1,5 @@
 <h2><%= "収入科目データ登録" %></h2>
-<div><%= link_to "収入科目データ一覧に戻る", :income_values %></div>
+<div><%= link_to "収入科目データ一覧に戻る", income_values_path %></div>
 
 <%= form_for(@form, url: income_values_path, method: :post) do |fb| %>
 
@@ -35,5 +35,5 @@
 <% end %>
 </table>
 
-<div><%= fb.submit %></div>
+<div><%= fb.submit "登録" %></div>
 <% end %>

@@ -23,8 +23,8 @@
 		<td><%= income_value.value %> 円</td>
 		<td><%= income_value.description %></td>
 		<td>
-		<%= link_to "編集", [:edit, income_value] %> |
-		<%= link_to "削除", income_value, method: :delete %>
+		<%= link_to "編集", edit_income_value_path(income_value.id) %> 
+		<%= link_to "削除", income_value_path(income_value.id), method: :delete %>
 		</td>
 	</tr>
 	<% end %>

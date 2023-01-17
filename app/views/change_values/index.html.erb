@@ -20,11 +20,11 @@
 	<tr>
 		<td><%= change_value.year_month.strftime('%Y年%m月') %></td>
 		<td><%= @changes.find(change_value.change_id).name %></td>
-		<td><%= change_value.value.to_s(:delimited) %> 円</td>
+		<td><%= change_value.value %> 円</td>
 		<td><%= change_value.description %></td>
 		<td>
-		<%= link_to "編集", [:edit, change_value] %> |
-		<%= link_to "削除", change_value, method: :delete %>
+		<%= link_to "編集", edit_change_value_path(change_value.id) %> 
+		<%= link_to "削除", change_value_path(change_value.id), method: :delete %>
 		</td>
 	</tr>
 	<% end %>

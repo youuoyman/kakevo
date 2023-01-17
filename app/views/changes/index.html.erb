@@ -1,6 +1,6 @@
 <% "変動費科目一覧" %>
 
-<%= link_to "変動費科目の新規登録", :new_change %>
+<%= link_to "変動費科目の新規登録", new_change_path %>
 <%= link_to "トップページへ戻る", root_path %>
  
 <% if @changes.present? %>
@@ -18,8 +18,8 @@
 				<td><%= change.name %></td>
 				<td><%= change.description %></td>
         <td>
-				<%= link_to "編集", [:edit, change] %>
-        <%= link_to "削除", change, method: :delete %>
+				<%= link_to "編集", edit_change_path(change.id) %>
+        <%= link_to "削除", change_path(change.id), method: :delete %>
 				</td>
 			</tr>
 		<% end %>

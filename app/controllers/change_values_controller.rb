@@ -24,7 +24,7 @@ class ChangeValuesController < ApplicationController
   def create
     @form = Form::ChangeForm.new(change_form_params)
     if @form.save
-      redirect_to root_path
+      redirect_to change_values_path
     else
       render :new
     end
@@ -32,7 +32,7 @@ class ChangeValuesController < ApplicationController
 
   def update
     if @change_value.update(change_value_params)
-      redirect_to root_path
+      redirect_to change_values_path
     else
       render :edit
     end
@@ -40,7 +40,7 @@ class ChangeValuesController < ApplicationController
 
   def destroy
     @change_value.destroy
-    redirect_to root_path
+    redirect_to change_values_path
   end
 
  private

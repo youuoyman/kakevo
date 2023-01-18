@@ -24,7 +24,7 @@ class FixedValuesController < ApplicationController
   def create
     @form = Form::FixedForm.new(fixed_form_params)
     if @form.save
-      redirect_to root_path
+      redirect_to fixed_values_path
     else
       render :new
     end
@@ -32,7 +32,7 @@ class FixedValuesController < ApplicationController
 
   def update
     if @fixed_value.update(fixed_value_params)
-      redirect_to root_path
+      redirect_to fixed_values_path
     else
       render :edit
     end
@@ -40,7 +40,7 @@ class FixedValuesController < ApplicationController
 
   def destroy
     @fixed_value.destroy
-    redirect_to root_path
+    redirect_to fixed_values_path
   end
 
  private

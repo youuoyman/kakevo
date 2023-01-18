@@ -18,7 +18,7 @@ class IncomesController < ApplicationController
   def create
 		@income = Income.new(income_params)
 		if @income.save
-			redirect_to root_path
+			redirect_to incomes_path
 		else
 			render :new
 		end
@@ -26,7 +26,7 @@ class IncomesController < ApplicationController
 
 	def update
 		if @income.update(income_params)
-			redirect_to root_path
+			redirect_to incomes_path
 		else
 			render :new
 		end
@@ -34,7 +34,7 @@ class IncomesController < ApplicationController
  
   def destroy
 		@income.destroy
-		redirect_to root_path
+		redirect_to incomes_path
 	end
 
   private

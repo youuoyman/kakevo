@@ -24,7 +24,7 @@ class IncomeValuesController < ApplicationController
   def create
     @form = Form::IncomeForm.new(income_form_params)
     if @form.save
-      redirect_to root_path
+      redirect_to income_values_path
     else
       render :new
     end
@@ -32,7 +32,7 @@ class IncomeValuesController < ApplicationController
 
   def update
     if @income_value.update(income_value_params)
-      redirect_to root_path
+      redirect_to income_values_path
     else
       render :edit
     end
@@ -40,7 +40,7 @@ class IncomeValuesController < ApplicationController
 
   def destroy
     @income_value.destroy
-    redirect_to root_path
+    redirect_to income_values_path
   end
 
  private

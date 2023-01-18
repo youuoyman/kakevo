@@ -18,7 +18,7 @@ class FixedsController < ApplicationController
   def create
 		@fixed = Fixed.new(fixed_params)
 		if @fixed.save
-			redirect_to root_path
+			redirect_to fixeds_path
 		else
 			render :new
 		end
@@ -26,7 +26,7 @@ class FixedsController < ApplicationController
 
 	def update
 		if @fixed.update(fixed_params)
-			redirect_to root_path
+			redirect_to fixeds_path
 		else
 			render :new
 		end
@@ -34,7 +34,7 @@ class FixedsController < ApplicationController
  
   def destroy
 		@fixed.destroy
-		redirect_to root_path
+		redirect_to fixeds_path
 	end
 
   private

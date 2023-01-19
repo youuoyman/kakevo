@@ -1,24 +1,59 @@
-# README
+# アプリケーション名
+kakevo
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# アプリケーション概要 このアプリケーションでできることを記載。
+シンプルに収入・固定費・変動費を科目毎にデータを登録できる
 
-Things you may want to cover:
+# URL
+https://kakevo.onrender.com
 
-* Ruby version
+# テスト用アカウント	
+・Basic認証パスワード: 1111
+・Basic認証ID: youuoyman
 
-* System dependencies
+# 利用方法	
+1.トップページの「科目設定一覧」にある科目毎の設定を押して、科目を登録する。
+2.トップページの「収支登録」にある収支毎の登録を押して、収支データを登録する。
 
-* Configuration
+# アプリケーションを作成した背景
+祖父が家計簿を手書きで記入していて「手間がかかって困っている」という悩みが判明しました。悩みを分析した結果、「手書きだと時間がかかってしまって面倒で習慣化できない」という仮説を立てた。解決するためにシンプルで時間短縮ができる家計簿アプリを開発することにした。
 
-* Database creation
+# 洗い出した要件
+https://docs.google.com/spreadsheets/d/1jTpAX5OTNG9OYo7iB2P2if7VvVLSoM53N8-c52CtHBY/edit#gid=982722306
 
-* Database initialization
+# 実装した機能についての画像やGIFおよびその説明
+1.収入科目設定を押して、「給料」という項目を登録します。一覧ページから項目の編集や削除も可能。
+https://i.gyazo.com/534ef28cfa1c9e1d881ccf54eac8f175.mp4
 
-* How to run the test suite
+2.収入金額登録を押して、登録年月を設定して送信を押す。金額・備考欄(任意)で入力して登録する。一覧ページから編集や削除も可能。
+https://i.gyazo.com/fcb5922755e914ceeee4b1e62285d1f9.mp4
 
-* Services (job queues, cache servers, search engines, etc.)
+3.科目設定で登録した項目をデータ登録で一括で登録できる。
+https://i.gyazo.com/15e446d62d9f5b631074237808ca1a19.mp4
 
-* Deployment instructions
+# 実装予定の機能
+1.デザインの編集
+2.収支確認機能の実装（月次収支確認機能・年間収支確認機能）
 
-* ...
+# データベース設計
+https://i.gyazo.com/bd9d4ed7d948fbc163a483d21cff326c.png
+
+# 画面遷移図
+https://i.gyazo.com/f31bc6c634fe03c503d4698ece58c2db.png
+
+# 開発環境使用した言語・サービスを記載。
+・フロントエンド
+・バックエンド
+・テスト
+・テキストエディタ
+・タスク管理
+
+# ローカルでの動作方法
+% git clone https://github.com/youuoyman/kakevo.git
+% cd kakevo
+% bundle install
+
+# 工夫したポイント※	制作背景・使用技術・開発方法・タスク管理など、企業へＰＲしたい事柄を記載。
+・asamoというタスク管理アプリを使って、todoをいつまでにどのように進行していくのか具体的に細分化させて実装しました。
+・家計簿アプリ作成にあたって、「検索」して自力で調べて開発することができた。
+・工夫した点は、データ登録する際に、科目設定で登録した項目を一括で登録できる点です。

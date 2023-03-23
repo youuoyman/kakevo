@@ -4,8 +4,9 @@ Rails.application.routes.draw do
   post "fixed_values/new/(/:name)" => "fixed_values#new"
   post "change_values/new/(/:name)" => "change_values#new"
 
-  get "balance", to: "balance#top"
-  post "balance/show(/:name)",to: "balance#show"
+  get "balance" => "balance#top"
+  post "balance/show(/:name)" => "balance#show"
+  post "balance/show_year(/:name)" => "balance#show_year"
 
   resources :incomes
   resources :fixeds

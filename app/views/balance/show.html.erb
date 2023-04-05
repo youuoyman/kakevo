@@ -1,7 +1,12 @@
-<h2><%= @year_month %> 月次収支確認 </h2>
-<%= link_to "トップページへ戻る", root_path %>
+<div class="body">
 
-<h3>収入</h3>
+<div class="title">
+ <div class="main-title"><%= link_to "kakevo", root_path %></div>
+</div>
+
+
+<div class="balance-i"><%= @year_month %> 月次収支確認 </div>
+<div class="memory1">収入</div>
 <% if @income_values.present? %>
 <table>
   <thead>
@@ -31,7 +36,7 @@
   <p>登録されている収入がありません</p>
 <% end %>
 
-<h3>固定費</h3>
+<div class="memory2">固定費</div>
 <% if @fixed_values.present? %>
 <table>
   <thead>
@@ -61,7 +66,7 @@
      <P>登録されている固定費がありません</p>
 <% end %>
 
-<h3>変動費</h3>
+<div class="memory3">変動費</div>
 <% if @change_values.present? %>
 <table>
   <thead>
@@ -87,20 +92,20 @@
   </tbody>
 </table>
 
-<h3>収支結果</h3>
 
 <table>
 <tbody>
 <tr>
-    <td><b>収支差</b></td>
-    <td style="text-align: right"><b><%= @balance_difference %>円</b></td>
+     <div class="memory4">収支差</div>
+    <td><b><%= @balance_difference %>円</b></td>
     <td></td>
 </tr>
 </tbody>
 </table>
-<b>収支差: <%= @balance_difference %>円</b>
+
 
 <% else %>
      <P>登録されている変動費がありません。</p>
 <% end %>
+</div>
 

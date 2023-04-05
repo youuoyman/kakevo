@@ -1,12 +1,21 @@
-<h2>収入科目の新規データ登録</h2>
-<%= link_to "トップページへ戻る", root_path %>
-<p>登録年月を設定してください</p>
+<div class="body">
+
+<div class="title">
+<div class="main-title"><%= link_to "kakevo", root_path %></div>
+</div>
+<div class="income-values-n">収入科目の新規データ登録
+</div>
+
+
+<p class="year-month">登録年月を設定してください</p>
+<div class="register-t">
 <%= form_tag({controller: :income_values, action: :new}, {method: :post}) do %>
 	<input type="month" name="year_month">
 	<input type="submit">
 <% end %>
+</div>
 
-<h2>収入科目 データ一覧 </h2>
+ <div class="income-values-i">収入科目のデータ一覧</div>
 <% if @income_values.present? %>
 <table>
   <tr>
@@ -32,3 +41,4 @@
 <% else %>
 	<p>登録されているデータがありません。</p>
 <% end %>
+</div>

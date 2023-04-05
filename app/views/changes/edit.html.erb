@@ -1,5 +1,12 @@
-<h2>変動費科目編集</h2>
+<div class="body">
+
+<div class="title">
+ <div class="main-title"><%= link_to "kakevo", root_path %></div>
+</div>
+
+
+<div class="change-new">変動費科目編集</div>
 <%= form_for @change do |form| %>
 	<%= render "form", form: form %>
-	<div><%= form.submit "編集" %></div>
+	<div class="register"><%= form.submit "編集" %></div>
 <% end %>

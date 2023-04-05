@@ -1,7 +1,10 @@
-<h2><%= @year %>年 年間収支確認</h2>
-<%= link_to "トップページへ戻る", root_path %>
+<div class="body">
+<div class="title">
+ <div class="main-title"><%= link_to "kakevo", root_path %></div>
+</div>
+
+<div class="balance-i"><%= @year %>年 年間収支確認</div>
 <table>
-    <thead>
         <tr>
           <th>年月</th>
           <th>収入合計値</th>
@@ -9,8 +12,6 @@
           <th>変動費合計値</th>
           <th>収支(収入-費用)結果</th>
         </tr>
-    </thead>
-    <tbody>
       <% month = 1 %>
       <% 0.upto(11) do |i| %>
         <% if @income_value_totals[i].present? %>
@@ -23,5 +24,5 @@
             </tr>
         <% end %>
       <% end %>
-    </tbody>
 </table>
+</div>

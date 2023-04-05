@@ -1,12 +1,18 @@
-<h2>月次収支確認</h2>
-<%= link_to "トップページへ戻る", root_path %>
-<%= form_tag({controller: :balance, action: :show}, {method: :post}) do %>
+<div class="body">
+<div class="title">
+ <div class="main-title"><%= link_to "kakevo", root_path %></div>
+</div>
+
+
+<div class="balance-i">月次収支確認</div>
+<div class="balance-r"><%= form_tag({controller: :balance, action: :show}, {method: :post}) do %>
 <input type="month" name="year_month">
 <input type="submit">
 <% end %>
+</div>
 
-<h2>年間収支確認</h2>
-<%= form_tag({controller: :balance, action: :show_year}, {method: :post}) do %>
+<div class="balance-i">年間収支確認</div>
+<div class="balance-r"><%= form_tag({controller: :balance, action: :show_year}, {method: :post}) do %>
     <input type="hidden" name="year" >
         <select name="year">
           <% 2010.upto(2050) do |n| %>
@@ -14,4 +20,6 @@
           <% end %>
         </select>
     <input type="submit">
+</div>
 <% end %>
+</div>
